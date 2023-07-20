@@ -146,11 +146,9 @@ export default function Home() {
           </Text>
           <Text mt="8" fontWeight="fonts.baseWeight" fontSize="2xl">
             If you'd like to get in touch, email me at{" "}
-            <a href="mailto:maxinejaysimpson@gmail.com">
-              <Code fontSize="20px" colorScheme="orange">
-                maxinejaysimpson@gmail.com
+              <Code fontSize="20px" colorScheme="pink">
+                ma{/*1*/}xi{/*2*/}ne{/*3*/}ja{/*4*/}ys{/*5*/}im{/*6*/}ps{/*7*/}on@gm{/*8*/}ai{/*9*/}l.com
               </Code>
-            </a>
           </Text>
         </Flex>
         <Heading as="h2" size="md" my="4">
