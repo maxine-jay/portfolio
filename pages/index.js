@@ -1,13 +1,11 @@
 import {
-  Button,
   Box,
   Code,
   Flex,
-  Grid,
   Heading,
-  Highlight,
   keyframes,
-  Link,
+  List,
+  ListItem,
   SimpleGrid,
   Tag,
   Text,
@@ -15,6 +13,7 @@ import {
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import Footer from "@components/Footer";
+import shortid from "shortid"
 
 const waveKeyFrame = keyframes`
   0% { transform: rotate(0deg)},
@@ -31,91 +30,91 @@ const waveKeyFrame = keyframes`
 let frameSkills = [
   {
     title: "Javascript",
-    color: "pink"
+    color: "pink",
   },
   {
     title: "React",
-    color: "pink"
+    color: "pink",
   },
   {
     title: "CSS",
-    color: "pink"
+    color: "pink",
   },
   {
     title: "SCSS",
-    color: "pink"
+    color: "pink",
   },
   {
     title: "HTML",
-    color: "pink"
+    color: "pink",
   },
   {
     title: "Umbraco",
-    color: "teal"
+    color: "teal",
   },
   {
     title: "11ty",
-    color: "teal"
+    color: "teal",
   },
   {
     title: "Git",
-    color: "green"
+    color: "green",
   },
   {
     title: "Visual Studio",
-    color: "green"
+    color: "green",
   },
   {
     title: "VSCode",
-    color: "green"
+    color: "green",
   },
   {
     title: "Jira",
-    color: "green"
+    color: "green",
   },
   {
     title: "BugHerd",
-    color: "green"
+    color: "green",
   },
   {
     title: "Figma",
-    color: "blackAlpha"
+    color: "orange",
   },
   {
     title: "Agile",
-    color: "purple"
+    color: "purple",
   },
 ];
 
 const fatbuzzSkills = [
   {
     title: "Javascript",
-    color: "pink"
+    color: "pink",
   },
   {
     title: "jQuery",
-    color: "pink"
+    color: "pink",
   },
   {
     title: "PHP",
-    color: "pink"
+    color: "pink",
   },
   {
     title: "CSS",
-    color: "pink"
+    color: "pink",
   },
   {
     title: "HTML",
-    color: "pink"
+    color: "pink",
   },
   {
     title: "WordPress",
-    color: "teal"
+    color: "teal",
   },
   {
     title: "Shopify",
-    color: "teal"
-  }
+    color: "teal",
+  },
 ];
 
 const waveAnimation = `${waveKeyFrame} 10s ease-in-out infinite; transform-origin: 55% 55%;`;
@@ -124,7 +123,11 @@ export default function Home() {
   return (
     <>
       <VStack pt={0}>
-        <Flex minHeight="calc(100vh - 100px)" flexDirection="column" justifyContent="center">
+        <Flex
+          minHeight="calc(100vh - 100px)"
+          flexDirection="column"
+          justifyContent="center"
+        >
           <Heading as="h1" fontWeight="fonts.baseWeight">
             Hi!{" "}
             <Box
@@ -138,15 +141,13 @@ export default function Home() {
             </Box>
           </Heading>
           <Text mt="8" fontWeight="fonts.baseWeight" fontSize="4xl">
-            I'm <strong>Maxine</strong>, a Front End Developer and I enjoy building beautiful, accessible and user-centered web applications.
+            I'm <strong>Maxine</strong>, a Front End Developer and I enjoy
+            building beautiful, accessible and user-centered web applications.
           </Text>
           <Text mt="8" fontWeight="fonts.baseWeight" fontSize="2xl">
             If you'd like to get in touch, email me at{" "}
             <a href="mailto:maxinejaysimpson@gmail.com">
-              <Code
-                fontSize="20px"
-                colorScheme="orange"
-              >
+              <Code fontSize="20px" colorScheme="orange">
                 maxinejaysimpson@gmail.com
               </Code>
             </a>
@@ -166,18 +167,20 @@ export default function Home() {
           <Flex flexDirection="column">
             <Text mb={4}>
               I collaborated with the UX design team and Back End Developers at
-              this creative advertising agency to build and maintain
-              dynamic, responsive and accessible websites for numerous clients.
+              this creative advertising agency to build and maintain dynamic,
+              responsive and accessible websites for numerous clients.
             </Text>
-            <Flex flexWrap="wrap">
+            <List display="flex" flexWrap="wrap">
               {frameSkills.map((skill) => {
                 return (
-                  <Tag m="1" colorScheme={skill.color} size="sm">
-                    {skill.title}
-                  </Tag>
+                  <ListItem key={shortid.generate()}>
+                    <Tag m="1" colorScheme={skill.color} size="sm">
+                      {skill.title}
+                    </Tag>
+                  </ListItem>
                 );
               })}
-            </Flex>
+            </List>
           </Flex>
         </SimpleGrid>
 
@@ -190,18 +193,22 @@ export default function Home() {
             <Text>2019 - 2021</Text>
           </Box>
           <Flex flexDirection="column">
-          <Text mb={4}>
-          Worked closely with the design, UX and marketing teams to build bespoke, responsive WordPress and Shopify themes for a variety of clients.
+            <Text mb={4}>
+              Worked closely with the design, UX and marketing teams to build
+              bespoke, responsive WordPress and Shopify themes for a variety of
+              clients.
             </Text>
-            <Flex flexWrap="wrap">
-            {fatbuzzSkills.map((skill) => {
+            <List display="flex" flexWrap="wrap">
+              {fatbuzzSkills.map((skill) => {
                 return (
-                  <Tag m="1" colorScheme={skill.color} size="sm">
-                    {skill.title}
-                  </Tag>
+                  <ListItem key={shortid.generate()}>
+                    <Tag m="1" colorScheme={skill.color} size="sm">
+                      {skill.title}
+                    </Tag>
+                  </ListItem>
                 );
               })}
-            </Flex>
+            </List>
           </Flex>
         </SimpleGrid>
         <Footer />
