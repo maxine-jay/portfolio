@@ -148,7 +148,7 @@ export default function Home() {
             If you'd like to get in touch, email me at{" "}
             <a href="mailto:maxinejaysimpson@gmail.com">
               <Code fontSize="20px" colorScheme="orange">
-                maxinejaysimpson@gmail.com
+                ma{/*abcde*/}xi{/*abcde*/}neja{/*abcde*/}ysim{/*abcde*/}pson@{/*abcde*/}gma{/*abcde*/}il.com
               </Code>
             </a>
           </Text>
