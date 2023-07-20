@@ -141,7 +141,7 @@ export default function Home() {
             </Box>
           </Heading>
           <Text mt="8" fontWeight="fonts.baseWeight" fontSize="4xl">
-            I'm <strong>Maxine</strong>, a Front End Developer and I enjoy
+            I'm <strong>Maxine</strong>, a Front End Developer, and I enjoy
             building beautiful, accessible and user-centered web applications.
           </Text>
           <Text mt="8" fontWeight="fonts.baseWeight" fontSize="2xl">
